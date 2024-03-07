@@ -66,7 +66,7 @@ export async function removeChat({ id, path }: { id: string; path: string }) {
 }
 
 export async function clearChats() {
-  const session = await auth()
+  const session = {user: {id: '123'}}
 
   if (!session?.user?.id) {
     return {
@@ -102,7 +102,7 @@ export async function getSharedChat(id: string) {
 }
 
 export async function shareChat(id: string) {
-  const session = await auth()
+  const session = {user: {id: '123'}}
 
   if (!session?.user?.id) {
     return {
