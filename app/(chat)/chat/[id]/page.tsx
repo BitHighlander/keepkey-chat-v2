@@ -13,7 +13,7 @@ export interface ChatPageProps {
 export async function generateMetadata({
   params
 }: ChatPageProps): Promise<Metadata> {
-  const session = {user:"billybob"}
+  const session = {user:{id:"billybob",name:"Billy Bob"}}
 
   if (!session?.user) {
     return {}
